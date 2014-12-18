@@ -1,0 +1,10 @@
+<h1>Edit this bike!</h1>
+
+<%= form_for @bike do |b| %>
+	Name: <%= b.text_field :name %>
+	Brand: <%= b.text_field :brand %>
+	Speed: <%= b.text_field :speed %>
+	<%= b.submit "Submit these changes!" %>
+<% end %> </br>
+
+<% link_to "Back to the list", bikes_path %>

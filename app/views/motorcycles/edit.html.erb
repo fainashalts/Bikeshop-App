@@ -1,0 +1,15 @@
+<h1>Edit this Motorcycle!</h1>
+
+<%= form_for @motorcycle do |f| %>
+	Name: <%= f.text_field :name %>
+	Brand: <%= f.text_field :brand %>
+	Speed: <%= f.text_field :speed %>
+	
+
+	<button><%= f.submit "Submit these changes to the motorcycle!" %></button>
+
+<% end %><br>
+
+
+
+<button><%= link_to "Back to the list!", motorcycles_path %></button>

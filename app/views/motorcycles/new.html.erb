@@ -1,0 +1,17 @@
+<h1>Add a new Motorcycle!</h1>
+
+<%= form_for @motorcycle do |b| %>
+	<%= b.label :name %>
+	<%= b.text_field :name %>
+
+	<%= b.label :brand %>
+	<%= b.text_field :brand %>
+
+	<%= b.label :speed %>
+	<%= b.text_field :speed %>
+
+	<%= b.submit "Add motorcycle" %>
+
+<% end %>
+
+<button><%= link_to "Back to the list", motorcycles_path %></button>

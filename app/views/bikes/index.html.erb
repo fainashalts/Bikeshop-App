@@ -1,0 +1,39 @@
+<div class="pure-menu pure-menu-open pure-menu-horizontal center-links">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li class="pure-menu-selected"><a href="#">About</a></li>
+        <li><a href="#">Our Company</a></li>
+        <li><a href="#">Bike Routes</a></li>
+        <li><a href=""><%= link_to "Motorcycles", motorcycles_path %></a></li>
+    </ul>
+</div>
+
+<header>
+	<h1>Carbon Fiber Bikes</h1>
+</header>
+
+
+<div id="container">
+	<div id="right-div">
+		<!-- <p>hello there</p> -->
+		<!-- <img src="http://p1.pichost.me/640/20/1431682.jpg"> -->
+		<img src="http://www.fuelyourcreativity.com/files/puegot-concept-bicycle1-600x352.jpg">
+	</div>
+
+
+	<div id="left-div">
+		<ul>
+		<% @bikes.each do |b| %>
+		<li><%= b.name %> | <%= b.brand %> | <button><%= link_to "View", bike_path(b) %></button></li></br>
+		
+		<% end %>
+		</ul>
+
+		<button><span><%= link_to "Add a new bike", new_bike_path %></span></button>
+	</div>
+
+	
+	
+</div>
+
+<footer> <p><strong>Actually</strong> backed by Dr. Dre and Snoop Dogg</p></footer>

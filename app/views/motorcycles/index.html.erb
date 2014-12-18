@@ -1,0 +1,37 @@
+<div class="pure-menu pure-menu-open pure-menu-horizontal center-links">
+    <ul>
+        <li><a href="#"><%= link_to "Home", bikes_path %></a></li>
+        <li class="pure-menu-selected"><a href="#">About</a></li>
+        <li><a href="#">Our Company</a></li>
+        <li><a href="#">Bike Routes</a></li>
+        <li><a href="#">Our Tech</a></li>
+    </ul>
+</div>
+
+<header>
+	<h1>Awesome Motorcycles</h1>
+</header>
+
+
+<div id="container">
+	<div id="right-div">
+		<!-- <p>hello there</p> -->
+		<!-- <img src="http://p1.pichost.me/640/20/1431682.jpg"> -->
+		<img id="motorcycle" src="http://pictures.topspeed.com/IMG/crop/201210/2013-star-motorcycle-raid-19_800x0w.jpg">
+	</div>
+
+
+	<div id="left-div">
+		<ul>
+		<% @motorcycles.each do |b| %>
+		<li><%= b.name %> | <%= b.brand %> | <button><%= link_to "View", motorcycle_path(b) %></button></li></br>
+		
+		<% end %>
+		</ul>
+
+		<button><span><%= link_to "Add a new motorcycle", new_motorcycle_path %></span></button>
+	</div>
+
+	
+	
+</div>
